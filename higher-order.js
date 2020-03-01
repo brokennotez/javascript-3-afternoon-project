@@ -21,7 +21,7 @@ const mixedNumbers = [6,3,1,7,5,2,6,8,9,4,2,7,9,3,1,8,4,3];
 */
 
 //Code Here
-let evenNumbers // = mixedNumbers.filter(/* Provide Your Callback Here */)
+let evenNumbers = mixedNumbers.filter(even => even % 2 === 0);// = mixedNumbers.filter(/* Provide Your Callback Here */)
 
 
 
@@ -32,20 +32,13 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 // Do not edit the code above.
 
 /*
-  Use the map method on the prices array to calculate a new array of post-tax prices.
-  Use a 7% tax rate.
+  let evenNumbers = mixedNumbers.filter(isEven); // = mixedNumbers.filter(/* Provide Your Callback Here */
 
-  Math reminder! To calculate the price after tax, multiply the price by 1 plus the taxRate as a decimal.
-  Example: if tax is 7%, the price afterTax could be calculated like this: afterTax = price * 1.07) 
-
-  The map function also takes a callback with the parameters
-  function(element, index, wholeArray){}  Function Form
-  (element, index, wholeArray)=>{}    Arrow Form
-*/
+evenNumbers
 
 //Code Here
-let postTaxPrices // = prices.map(/* Provide Your Callback Here );
 
+let postTaxPrices = prices.map(price => price*1.07);// = prices.map(/* Provide Your Callback Here );
 
 
 ////////// PROBLEM 3 //////////
@@ -63,8 +56,8 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
 
+let totalPopulation = populations.reduce((total,pop) => total+pop);
 
 
 ////////// PROBLEM 4 //////////
@@ -89,7 +82,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+let myStrongest = monstersInYourPocket.filter(monster => monster.CP > 200);
 
 
 
@@ -105,8 +98,15 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 /*
   Use a higher order method to get all the order totals after adding in the sales tax (given to you as a tax rate, hint: you'll need to do some multiplication). Your answer should be an array of numbers, one total for each order.
 */
+var total = orders.map( green => green['price'] += green['price']*green['tax']);
 
-let orderTotals // Code here
+
+console.log(total);
+
+
+let ordersTotal = orders.map(order => order.price += order.price * order.tax);
+// //Code Here
+
 
 
 

@@ -51,7 +51,22 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater(){
+for(let i = employees.length-1; i >= 0; i--){
+  let employee = employees[i];
+if(employees[i].firstName === 'Theo') {
+  delete employees[i];
+  continue;
+}
+if(employees[i].firstName === 'Lorie') {
+  employees[i].department = 'HR';
+  debugger
+  employees[i] = employee;
+  continue;
+}
+}
+return employees
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -69,7 +84,7 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+function removeDuplicates 
 
 
 ////////// PROBLEM 3 //////////
@@ -140,7 +155,13 @@ var myCar = {
 
 //Code Here
 
-
+function recordCleaner() {
+ for (let i = 0; 1 < myCar.accidents.length; i++) {
+  if ( myCar.accidents[i].atFaultForAccident === true ){
+  myCar.accidents[i].atFaultForAccident = false
+ }
+  }
+}
 
 ////////// PROBLEM 5 //////////
 
